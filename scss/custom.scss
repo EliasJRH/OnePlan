@@ -1,0 +1,50 @@
+// 1. Include functions first
+@import "../node_modules/bootstrap/scss/functions";
+
+// 2. Include the default variables
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+
+// 3. Define custom colors
+$primary: #f2863c;      // Orange
+$secondary: #f5b466;    // Light Orange
+$success: #27AE60;      // Green
+$info: #3498DB;         // Blue
+$warning: #F39C12;      // Orange
+$danger: #E74C3C;       // Red
+$light: #ECF0F1;        // Light Gray
+$dark: #2C3E50;         // Dark Blue-Gray
+
+// 4. Create the custom color map
+$custom-colors: (
+  "accent": #ff9f55,    // Custom orange accent
+  "muted": #7F8C8D      // Medium gray
+);
+
+// 5. Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+// 6. Include remainder of required Bootstrap stylesheets
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+// 7. Include optional Bootstrap components
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/buttons";
+@import "../node_modules/bootstrap/scss/transitions";
+@import "../node_modules/bootstrap/scss/card";
+@import "../node_modules/bootstrap/scss/nav";
+@import "../node_modules/bootstrap/scss/navbar";
+@import "../node_modules/bootstrap/scss/forms";
+@import "../node_modules/bootstrap/scss/alert";
+@import "../node_modules/bootstrap/scss/badge";
+@import "../node_modules/bootstrap/scss/helpers";
+
+// 8. Include utilities API last
+@import "../node_modules/bootstrap/scss/utilities/api";
